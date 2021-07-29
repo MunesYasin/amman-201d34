@@ -29,7 +29,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) {
   let product = a*b ;
-  let result = ' '+a+' and '+b+' is '+c;
+  
   return [product, `the product of ${a} and ${b} is ${product}. `];
 
 }
