@@ -52,9 +52,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let sum1 = a+b+c;
-let product2 = a*b*c;
-return[sum1,product2,`${a} and ${b} and ${c} sum to ${sum1}`,`The product of ${a} and ${b} and ${c} is ${product2}`]
+  let x = sum(a, b);
+  let y = x[0];
+  let z = sum(y, c);
+  let sumOfelements = z[0];
+
+  let s = multiply(a, b);
+  let m = s[0];
+  let n = multiply(m, c);
+  let productsOfelements = n[0];
+
+  return [sumOfelements , productsOfelements , `${a} and ${b} and ${c} sum to ${sumOfelements}.`,`The product of ${a} and ${b} and ${c} is ${productsOfelements}.`];
+
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -81,7 +90,7 @@ function sumArray(sumArr) { //eslint-disable-line.
   let z = sum(y, sumArr[2]);
   let sumOfelements = z[0];
   
-  return [sumOfelements , `${sumArr[0]},${sumArr[2]},${sumArray[2] } was passed in as an array of numbers , and ${sumOfelements} is their sum`];
+  return [sumOfelements , `${sumArr[0]},${sumArr[1]},${sumArr[2] } was passed in as an array of numbers , and ${sumOfelements} is their sum`];
   
 }
 
