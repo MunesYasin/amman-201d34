@@ -74,11 +74,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-
-function sumArray(sumArr) { //eslint-disable-line
-  let sum = testArray[0]+testArray[1]+testArray[2];
-  return [sum , `${testArray[0]},${testArray[2]},${testArray[2] } was passed in as an array of numbers , and ${sum} is their sum`]
-
+function sumArray(sumArr) { //eslint-disable-line.
+  let x = sum(sumArr[0],sumArr[1]);
+  let y = x[0];
+  let z = sum(y, sumArr[2]);
+  let sumOfelements = z[0];
+  
+  return [sumOfelements , `${sumArr[0]},${sumArr[2]},${sumArray[2] } was passed in as an array of numbers , and ${sumOfelements} is their sum`];
+  
 }
 
 // Here is the test for sumArray(); uncomment it to run it
