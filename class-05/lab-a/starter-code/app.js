@@ -96,7 +96,7 @@ function sumArray(sumArr) { //eslint-disable-line
   let z = sum(y, sumArr[2]);
   let sumOfelements = z[0];
   
-  return [sumOfelements , `${sumArr[0]},${sumArr[2]},${sumArray[2] } was passed in as an array of numbers , and ${sumOfelements} is their sum`];
+  return [sumOfelements , `${sumArr[0]},${sumArr[1]},${sumArr[2] } was passed in as an array of numbers , and ${sumOfelements} is their sum`];
   
 }
 
