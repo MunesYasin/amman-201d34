@@ -53,7 +53,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
 
-let multi = multiply(multiply(a, b)[0], c)[0]
+
+
+
+  let multi = multiply(multiply(a, b)[0], c)[0]
+
   let sum_3 = sum(sum(a, b)[0], c)[0]
   return [sum_3, multi, `${a} and ${b} and ${c} sum to 16.`, `The product of ${a} and ${b} and ${c} is ${multi}.`]
 
@@ -81,12 +85,25 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 
+
 function sumArray(sumArr) { //eslint-disable-line
   
+
   
   let sum_array = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]
 
   return [sum_array, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum_array} is their sum.`]
+
+
+  let x = sum(sumArr[0],sumArr[1]);
+  let y = x[0];
+  let z = sum(y, sumArr[2]);
+  let sumOfelements = z[0];
+  
+
+
+  return [sumOfelements , `${sumArr[0]},${sumArr[1]},${sumArr[2] } was passed in as an array of numbers , and ${sumOfelements} is their sum`];
+
   
 }
 
@@ -120,10 +137,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
 
+ let s = multiply(multArr[0], multArr[1]);
+  let m = s[0];
+  let n = multiply(m, multArr[2]);
+  let productsOfelements = n[0];
+return [ productsOfelements,`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${productsOfelements}`];
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
 
+// Here is the test for multiplyArray(); uncomment it to run it
+testmultiplyArray (testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
