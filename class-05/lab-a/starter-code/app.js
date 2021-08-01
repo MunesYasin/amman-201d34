@@ -52,18 +52,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let sum_array = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0]
 
-  let x = sum(a, b);
-  let y = x[0];
-  let z = sum(y, c);
-  let sumOfelements = z[0];
-
-  let s = multiply(a, b);
-  let m = s[0];
-  let n = multiply(m, c);
-  let productsOfelements = n[0];
-
-  return [sumOfelements , productsOfelements , `${a} and ${b} and ${c} sum to ${sumOfelements}.`,`The product of ${a} and ${b} and ${c} is ${productsOfelements}.`];
+  return [sum_array, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sum_array} is their sum.`]
 
 
 }
